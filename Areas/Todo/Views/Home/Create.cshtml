@@ -1,0 +1,23 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model WebApps.Areas.Todo.ViewModels.TaskItemDetailViewModel
+
+<h1>This is a create page</h1>
+
+<form asp-action="Create">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="@Model.TaskItem.TaskDescription">Task Description</label>
+            <input type="text" class="form-control" asp-for="@Model.TaskItem.TaskDescription">
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="@Model.TaskItem.DueDate">Due Date</label>
+            <input type="date" class="form-control" asp-for="@Model.TaskItem.DueDate">
+        </div>
+        <button type="submit" class="btn btn-primary">Add Task</button>
+    </div>
+</form>
